@@ -514,3 +514,17 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 > This is a hobby project created for educational and security research purposes. It serves as a personal learning experience and a playing field for exploring advanced Windows concepts.
 >
 > **This tool is NOT intended to be a fully-featured infostealer or a guaranteed EDR evasion tool.** While it employs advanced techniques, its primary goal is to demonstrate and dissect the ABE mechanism, not to provide operational stealth for malicious use. Please ensure compliance with all relevant legal and ethical guidelines.
+
+---
+
+## 🐍 Python Tools (Dev & Analysis)
+
+The `tools/` directory contains auxiliary Python scripts for process discovery and COM interface analysis. 
+
+To use these tools, ensure you have Python 3.8+ and install the required dependencies:
+
+\`\`\`bash
+pip install -r requirements.txt
+\`\`\`
+
+**Note:** While the main exploit is Windows-specific, \`browser_processes.py\` now supports process enumeration on Linux and macOS for research and debugging purposes.

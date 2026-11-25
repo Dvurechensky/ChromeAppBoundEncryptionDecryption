@@ -9,11 +9,22 @@ import psutil
 import sys
 from collections import defaultdict
 
-BROWSERS = {
-    'chrome.exe': 'Chrome',
-    'msedge.exe': 'Edge',
-    'brave.exe': 'Brave'
-}
+import platform
+
+if platform.system() == 'Windows':
+    BROWSERS = {
+        'chrome.exe': 'Chrome',
+        'msedge.exe': 'Edge',
+        'brave.exe': 'Brave'
+    }
+else:
+    # Linux / macOS process names
+    BROWSERS = {
+        'chrome': 'Chrome',
+        'chromium': 'Chromium',
+        'brave': 'Brave',
+        'microsoft-edge': 'Edge'
+    }
 
 def get_browser_processes():
     """Get all browser processes grouped by type."""
